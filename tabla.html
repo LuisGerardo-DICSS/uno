@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLA</title>
+</head>
+
+<body>
+    <center>
+    
+    
+    
+<form>
+    <label>Nombre</label><br>
+    <input type="text" id="Nomb" name="Nomb"><br><br>
+    <label>Apellidos</label><br>
+    <input type="text" id="LName" name="LName"><br><br>
+    <label>Edad</label><br>
+    <input type="text" id="Edad" name="Edad"><br><br>
+    <label>Correo</label><br>
+    <input type="text" id="Correo" name="Correo"><br><br>
+    <label>Contraseña</label><br>
+    <input type="text" id="Contra" name="Contra"><br><br>
+    <button type="button" onclick="guardardatos();">GUARDAR</button>
+               
+</form>
+<table border="1" id="tabladatos">
+    <thead>
+            <tr>
+                 <th>Nombre</th>
+                 <th>Apellidos</th>
+                 <th>Edad</th>
+                 <th>Correo</th>
+                 <th>Contraseña</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+        </tr>
+    </tbody>
+         
+</table>
+</body>
+<script>
+
+    function guardardatos()
+    {
+    
+    let table = document.getElementById("tabladatos");
+
+    
+    let sVNomb = document.getElementById("Nomb").value;
+    let sVLName = document.getElementById("LName").value;
+    let sVEdad = document.getElementById("Edad").value;
+    let sVCorreo = document.getElementById("Correo").value;
+    let sVContra = document.getElementById("Contra").value;
+    
+
+    let row = table.insertRow(1);
+
+    let cell1 = row.insertCell(0);
+    let cell2 = row.insertCell(1);
+    let cell3 = row.insertCell(2);
+    let cell4 = row.insertCell(3);
+
+    cell1.innerHTML= sVNomb;
+    cell2.innerHTML= sVLName;
+    cell3.innerHTML= sVEdad;
+    cell4.innerHTML= sVCorreo;
+    cell5.innerHTML= sVContra;
+    
+    }
+</script>
+</html>
